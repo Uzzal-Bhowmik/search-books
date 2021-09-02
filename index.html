@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Any Book!</title>
+
     <!-- tailwind css stylesheet  -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
@@ -31,6 +32,7 @@
 
             <!-- search bar and button  -->
             <div style="display: grid; grid-template-columns: 30% 70%;">
+
                 <!-- book image -->
                 <div>
                     <img width="100%" src="images/book.jpg" alt="Image of a book">
@@ -51,7 +53,7 @@
                             </div>
                             <div>
                                 <button id="search-btn" type="submit"
-                                    class="w-12 h-12 rounded-full flex justify-center items-center bg-purple-400 text-white"
+                                    class="w-12 h-12 rounded-full flex justify-center items-center bg-purple-400 text-white hover:scale-100 hover:shadow-2xl transform transition-all duration-500"
                                     :disabled="search.length == 0">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +75,7 @@
             </div>
 
             <!-- search results  -->
-            <div id="book-cards-container" class="grid grid-cols-3 gap-6">
+            <div id="book-cards-container" class="grid grid-cols-3 gap-10">
                 <!-- card-1  -->
 
             </div>
