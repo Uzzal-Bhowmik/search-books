@@ -8,6 +8,10 @@ document.getElementById('search-btn').addEventListener('click', function () {
     const searchValue = searchBar.value;
     const bookCardsContainer = document.getElementById('book-cards-container');
 
+    // clearing previous error massages
+    nothingFound.style.display = 'none';
+    searchBoxEmpty.style.display = 'none';
+
     // display error if search field is empty
     if (searchValue === '') {
         document.getElementById('book-cards-container').textContent = '';
@@ -22,8 +26,7 @@ document.getElementById('search-btn').addEventListener('click', function () {
         searchBar.value = '';
         // clearing the cards container 
         bookCardsContainer.textContent = '';
-        // clearing the error msg 
-        searchBoxEmpty.style.display = 'none';
+
 
 
         // displaying card loader 
@@ -66,9 +69,6 @@ const displayBookCards = (booksInfo) => {
     else {
 
         bookCardsContainer.textContent = '';
-        nothingFound.style.display = 'none';
-        searchBoxEmpty.style.display = 'none';
-
 
         // updating books counter 
         booksCounter.textContent = '';
