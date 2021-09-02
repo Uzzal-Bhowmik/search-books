@@ -7,17 +7,20 @@ document.getElementById('search-btn').addEventListener('click', function () {
     const searchBar = document.getElementById('search-bar');
     const searchValue = searchBar.value;
     const bookCardsContainer = document.getElementById('book-cards-container');
+    const booksCounter = document.getElementById('books-counter')
 
     // clearing previous error massages
     nothingFound.style.display = 'none';
     searchBoxEmpty.style.display = 'none';
+
+    // clearing previous total book result 
+    booksCounter.textContent = "";
 
     // display error if search field is empty
     if (searchValue === '') {
         document.getElementById('book-cards-container').textContent = '';
         searchBoxEmpty.style.display = 'block';
         nothingFound.style.display = 'none';
-        document.getElementById('books-counter').textContent = '';
 
     }
 
@@ -26,8 +29,6 @@ document.getElementById('search-btn').addEventListener('click', function () {
         searchBar.value = '';
         // clearing the cards container 
         bookCardsContainer.textContent = '';
-
-
 
         // displaying card loader 
         for (let i = 0; i < 6; i++) {
