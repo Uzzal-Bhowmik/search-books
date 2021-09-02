@@ -2,7 +2,7 @@
 const searchBoxEmpty = document.getElementById('search-box-empty');
 const nothingFound = document.getElementById('nothing-found');
 
-// Search Button event listener handling
+// Search Button event listener
 document.getElementById('search-btn').addEventListener('click', function () {
     const searchBar = document.getElementById('search-bar');
     const searchValue = searchBar.value;
@@ -93,7 +93,7 @@ const displayBookCards = (booksInfo) => {
 
             const bookDiv = document.createElement('div');
             bookDiv.innerHTML = `
-                <div
+            <div
                     class="container mx-auto max-w-sm bg-white rounded-xl shadow-lg hover:scale-100 hover:shadow-2xl transform transition-all duration-500 h-full">
 
                     <div class="border rounded-xl rounded-b-none w-full">
@@ -112,20 +112,12 @@ const displayBookCards = (booksInfo) => {
 
                     <p class="text-lg mt-4 font-semibold">First Publish Year: 
                     <span class="text-blue-700">${book.first_publish_year == undefined ? 'Not Available' : book.first_publish_year}</span></p>
+                </div>
+            </div >
 
-                    
-
-                    </div>
-                </div >
-
-    `;
+            `;
             bookCardsContainer.appendChild(bookDiv);
 
         });
     }
 }
-
-/* { <p class="text-lg font font-semibold mb-4">First Publish Year: <span class="text-blue-400 font-semibold">${book.first_publish_year == undefined ? 'Not Available' : book.first_publish_year}</span></p> } */
-
-
-/* <p class="text-lg mt-4">Publisher:   <span class="text-blue-400 font-semibold>${book.publisher == undefined ? "Not Available" : book.publisher[0]}</span></p> */
