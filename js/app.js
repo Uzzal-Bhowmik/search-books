@@ -87,7 +87,7 @@ const displayBookCards = (booksInfo) => {
                 url = "images/NoCover.png"
             }
             else {
-                url = `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`
+                url = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`;
             }
 
 
