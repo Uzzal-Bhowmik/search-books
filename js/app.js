@@ -93,7 +93,7 @@ const displayBookCards = (booksInfo) => {
             const bookDiv = document.createElement('div');
             bookDiv.innerHTML = `
                 <div
-                    class="container mx-auto max-w-sm bg-white rounded-xl shadow-lg hover:scale-100 hover:shadow-2xl transform transition-all duration-500 h-full">
+                    class="container mx-auto max-w-sm bg-white rounded-xl shadow-lg hover:scale-100 hover:shadow-2xl transform transition-all duration-500 h-full border border-purple-300">
 
                     <div class="border rounded-xl rounded-b-none w-full">
                         <img id='book-images' src="${url}"
@@ -102,8 +102,8 @@ const displayBookCards = (booksInfo) => {
 
                 <div class="p-6 text-left">
                     <h1 class="text-3xl font-bold text-gray-800 cursor-pointer mb-4"><span class="text-2xl">Book Name: ${book.title}</span></h1>
-                    <h2 class="text-xl text-gray-800 font-semibold mb-4"><span class="text-pink-400">Author: ${book.author_name == undefined || book.author_name == null ? 'Unknown Author' : book.author_name[0]}</span></p>
-                    <p class="text-lg font font-thin mb-4">Published By: ${book.publisher == undefined ? "Not Available" : book.publisher[0]}</p>
+                    <h2 class="text-xl text-gray-800 font-semibold"><span class="text-pink-400">Author: ${book.author_name == undefined || book.author_name == null ? 'Unknown Author' : book.author_name[0]}</span></p>
+                    <p class="text-lg font font-thin mt-4">Publisher: ${book.publisher == undefined ? "Not Available" : book.publisher[0]}</p>
                     <p class="text-lg font font-semibold mb-4">First Publish Year: <span class="text-blue-400 font-semibold">${book.first_publish_year == undefined ? 'Not Available' : book.first_publish_year}</span></p>
 
                     </div>
